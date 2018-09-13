@@ -17,9 +17,9 @@ public class ProfilMonsterActivity extends AppCompatActivity {
 
         ArrayList<Drawable>listeEvolution = new ArrayList<>();
         listeEvolution.add(ContextCompat.getDrawable(ProfilMonsterActivity.this, R.drawable.fire_lion_0));
-        listeEvolution.add(ContextCompat.getDrawable(ProfilMonsterActivity.this, R.drawable.fire_lion_0));
-        listeEvolution.add(ContextCompat.getDrawable(ProfilMonsterActivity.this, R.drawable.fire_lion_0));
-        listeEvolution.add(ContextCompat.getDrawable(ProfilMonsterActivity.this, R.drawable.fire_lion_0));
+        listeEvolution.add(ContextCompat.getDrawable(ProfilMonsterActivity.this, R.drawable.fire_lion_1));
+        listeEvolution.add(ContextCompat.getDrawable(ProfilMonsterActivity.this, R.drawable.fire_lion_2));
+        listeEvolution.add(ContextCompat.getDrawable(ProfilMonsterActivity.this, R.drawable.fire_lion_3));
         ViewPager viewPager = (ViewPager) findViewById(R.id.view_slide_monster);
         viewPager.setAdapter(new EvolutionPagerAdapter(this,listeEvolution));
     }

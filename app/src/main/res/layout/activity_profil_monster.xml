@@ -8,14 +8,18 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_slide_monster"
-        android:layout_width="368dp"
-        android:layout_height="175dp"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/fire_habitat_8"
         android:isScrollContainer="true"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 
 </android.support.constraint.ConstraintLayout>
