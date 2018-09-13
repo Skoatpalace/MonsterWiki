@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Monster Wiki</string>
+    <string name="lorem_ipsum">lorem</string>
 </resources>
