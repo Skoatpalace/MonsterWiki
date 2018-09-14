@@ -6,4 +6,108 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="#dbf6f5f2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_FireLion"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="40dp"
+                android:background="#7fc05513"
+                android:drawableStart="@drawable/fire_lion_1"
+                android:onClick="GoTo"
+                android:text="Fire Lion"
+                android:textColor="#c24818"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/button_LightSpirit"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="40dp"
+                android:background="#762880a9"
+                android:drawableStart="@drawable/genie_1"
+                android:onClick="GoTo"
+                android:text="Genie"
+                android:textColor="#1a5e67"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/button_Genie"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="40dp"
+                android:background="#60d43cf3"
+                android:drawableStart="@drawable/light_spirit_1"
+                android:onClick="GoTo"
+                android:text="LIght Spirit"
+                android:textColor="#860799"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/button_Metalsaur"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="40dp"
+                android:background="#8f887c7c"
+                android:drawableStart="@drawable/metalsaur_1"
+                android:onClick="GoTo"
+                android:text="Metalsaur"
+                android:textColor="#3b3a3a"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/button_"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="40dp"
+                android:background="#68d1cdcd"
+                android:drawableStart="@drawable/panda_1"
+                android:onClick="GoTo"
+                android:text="Panda"
+                android:textColor="#706a6a"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="40dp"
+                android:background="#804c2424"
+                android:drawableStart="@drawable/rockilla_1a"
+                android:onClick="GoTo"
+                android:text="Rockilla"
+                android:textColor="#5a2a2a"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="40dp"
+                android:background="#d9af07"
+                android:drawableStart="@drawable/thunder_eagle_2"
+                android:onClick="GoTo"
+                android:text="Thunder Eagle"
+                android:textColor="#875d02"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>
