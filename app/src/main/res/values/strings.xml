@@ -1,3 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Monster Wiki</string>
+    <string name="_13" />
+    <string name="speed" />
+    <string name="life" />
+    <string name="power" />
+    <string name="input_level" />
+    <string name="stats_lvl_0" />
+    <string name="fire_lion" />
+    <string name="stamina" />
 </resources>
