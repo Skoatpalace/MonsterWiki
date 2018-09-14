@@ -22,5 +22,10 @@ public class ProfilMonsterActivity extends AppCompatActivity {
         listeEvolution.add(ContextCompat.getDrawable(ProfilMonsterActivity.this, R.drawable.fire_lion_3));
         ViewPager viewPager = (ViewPager) findViewById(R.id.view_slide_monster);
         viewPager.setAdapter(new EvolutionPagerAdapter(this,listeEvolution));
+
+        ViewPager slideDesc = findViewById(R.id.slideMonster);
+        slideDesc.setAdapter(new StatsPageAdapter(ProfilMonsterActivity.this));
     }
+
+
 }
