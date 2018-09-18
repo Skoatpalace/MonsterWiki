@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
 
@@ -15,6 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/lightspirit"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -23,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="40dp"
-                android:background="#7fc05513"
+                android:background="#43c0441f"
                 android:drawableStart="@drawable/fire_lion_1"
                 android:onClick="GoTo"
                 android:text="Fire Lion"
@@ -36,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="40dp"
-                android:background="#762880a9"
+                android:background="#6101283b"
                 android:drawableStart="@drawable/genie_1"
                 android:onClick="GoTo"
                 android:text="Genie"
@@ -49,11 +50,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="40dp"
-                android:background="#60d43cf3"
+                android:background="#4b8c1fa2"
                 android:drawableStart="@drawable/light_spirit_1"
                 android:onClick="GoTo"
                 android:text="LIght Spirit"
-                android:textColor="#860799"
+                android:textColor="#a60fbc"
                 android:textStyle="bold"
                 android:typeface="serif" />
 
@@ -62,11 +63,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="40dp"
-                android:background="#8f887c7c"
+                android:background="#5b887c7c"
                 android:drawableStart="@drawable/metalsaur_1"
                 android:onClick="GoTo"
                 android:text="Metalsaur"
-                android:textColor="#3b3a3a"
+                android:textColor="#c85c1c"
                 android:textStyle="bold"
                 android:typeface="serif" />
 
@@ -75,11 +76,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="40dp"
-                android:background="#68d1cdcd"
+                android:background="#3ed1cdcd"
                 android:drawableStart="@drawable/panda_1"
                 android:onClick="GoTo"
                 android:text="Panda"
-                android:textColor="#706a6a"
+                android:textColor="#f8f4f4"
                 android:textStyle="bold"
                 android:typeface="serif" />
 
@@ -87,11 +88,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="40dp"
-                android:background="#804c2424"
+                android:background="#4b862626"
                 android:drawableStart="@drawable/rockilla_1a"
                 android:onClick="GoTo"
                 android:text="Rockilla"
-                android:textColor="#5a2a2a"
+                android:textColor="#914040"
                 android:textStyle="bold"
                 android:typeface="serif" />
 
@@ -99,14 +100,37 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="40dp"
-                android:background="#d9af07"
+                android:background="#56d9af07"
                 android:drawableStart="@drawable/thunder_eagle_2"
                 android:onClick="GoTo"
                 android:text="Thunder Eagle"
-                android:textColor="#875d02"
+                android:textColor="#a9791f"
                 android:textStyle="bold"
                 android:typeface="serif" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="40dp"
+                android:background="#501684a1"
+                android:drawableStart="@drawable/turtle_1"
+                android:onClick="GoTo"
+                android:text="Turtle"
+                android:textColor="#0e8066"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="40dp"
+                android:background="#440f0b2a"
+                android:drawableStart="@drawable/tyrannoking_1"
+                android:onClick="GoTo"
+                android:text="Tiranno King"
+                android:textColor="#1a43a9"
+                android:textStyle="bold"
+                android:typeface="serif" />
 
         </LinearLayout>
     </ScrollView>
