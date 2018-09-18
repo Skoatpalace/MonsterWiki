@@ -5,6 +5,8 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -25,6 +27,16 @@ public class ProfilMonsterActivity extends AppCompatActivity {
 
         ViewPager slideDesc = findViewById(R.id.slideMonster);
         slideDesc.setAdapter(new StatsPageAdapter(ProfilMonsterActivity.this));
+
+        ImageView logo = findViewById(R.id.logo_marks);
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+
     }
 
 

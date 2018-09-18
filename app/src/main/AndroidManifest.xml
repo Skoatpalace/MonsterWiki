@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/newmonsterwiki_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".ProfilMonsterActivity"></activity>
-        <activity
+    <activity
             android:name=".SplashScreen"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -22,6 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
-
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ProfilMonsterActivity"
+        android:windowSoftInputMode="stateHidden" ></activity>
+        
 </manifest>
