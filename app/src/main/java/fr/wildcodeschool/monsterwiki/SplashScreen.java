@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 
-public class SplashScreen extends Activity{
+public class gSplashScreen extends Activity{
 
     private static int SPLASH_TIME_OUT = 3000;
 
