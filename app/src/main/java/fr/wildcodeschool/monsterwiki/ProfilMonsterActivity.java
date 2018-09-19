@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 
 public class ProfilMonsterActivity extends AppCompatActivity {
+    int mlevel = 0;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +28,29 @@ public class ProfilMonsterActivity extends AppCompatActivity {
         ViewPager viewPager = (ViewPager) findViewById(R.id.view_slide_monster);
         viewPager.setAdapter(new EvolutionPagerAdapter(this,listeEvolution));
 
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                mlevel = position;
+
+                ViewPager slideDesc = findViewById(R.id.slideMonster);
+                slideDesc.setAdapter(new StatsPageAdapter(ProfilMonsterActivity.this, mlevel));
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
         ViewPager slideDesc = findViewById(R.id.slideMonster);
-        slideDesc.setAdapter(new StatsPageAdapter(ProfilMonsterActivity.this));
+        slideDesc.setAdapter(new StatsPageAdapter(ProfilMonsterActivity.this, mlevel));
 
         ImageView logo = findViewById(R.id.logo_marks);
         logo.setOnClickListener(new View.OnClickListener() {
