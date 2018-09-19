@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+
 import java.util.ArrayList;
 
 public class EvolutionPagerAdapter extends PagerAdapter {
@@ -15,9 +16,11 @@ public class EvolutionPagerAdapter extends PagerAdapter {
     private Context mContext;
     private ArrayList<Drawable> mEvolutions;
 
+
     public EvolutionPagerAdapter(Context context, ArrayList<Drawable> evolutions) {
         mContext = context;
         mEvolutions = evolutions;
+
     }
 
     @Override

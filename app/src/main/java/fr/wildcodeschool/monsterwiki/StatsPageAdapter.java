@@ -1,11 +1,11 @@
 package fr.wildcodeschool.monsterwiki;
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class StatsPageAdapter extends PagerAdapter {
 
@@ -14,11 +14,18 @@ public class StatsPageAdapter extends PagerAdapter {
             R.layout.slide_layout,
             R.layout.desc
     };
+
     int mlvl;
 
     public StatsPageAdapter(Context context, int level) {
         mContext = context;
-        mlvl = level;
+        mlvl = level
+    String mMonsterName;
+
+    public StatsPageAdapter(Context context, String monsterName) {
+        mContext = context;
+        mMonsterName = monsterName;
+
     }
 
     @Override
@@ -63,6 +70,10 @@ public class StatsPageAdapter extends PagerAdapter {
 
 
         collection.addView(layout);
+        if (position == 0) {
+            TextView monsterName = layout.findViewById(R.id.name_monster);
+            monsterName.setText(mMonsterName);
+        }
         return layout;
     }
 

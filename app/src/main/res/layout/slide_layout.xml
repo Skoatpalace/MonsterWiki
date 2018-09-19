@@ -100,97 +100,97 @@
         android:id="@+id/textInputLayout3"
         android:layout_width="126dp"
         android:layout_height="0dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginStart="124dp"
         android:layout_marginTop="60dp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="280dp">
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/level"
+            android:layout_width="50dp"
+            android:layout_height="39dp"
+            android:inputType="text|number"
+            android:text="@string/stats_lvl_0" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="126dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="108dp"
-        android:layout_marginStart="108dp"
+        android:layout_marginLeft="152dp"
+        android:layout_marginStart="152dp"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/statFour"
             android:layout_width="50dp"
             android:layout_height="39dp"
             android:enabled="false"
             android:inputType="text|number"
-            android:text="100"
-            android:textColor="@android:color/white" />
+            android:text="100" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/textInputLayout5"
         android:layout_width="126dp"
         android:layout_height="0dp"
-        android:layout_marginLeft="132dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginLeft="176dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/statThree"
-            android:layout_width="49dp"
+            android:layout_width="50dp"
             android:layout_height="39dp"
             android:enabled="false"
             android:inputType="text|number"
-            android:text="175"
-            android:textColor="@android:color/white" />
+            android:text="175" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/textInputLayout2"
         android:layout_width="126dp"
         android:layout_height="0dp"
-        android:layout_marginLeft="152dp"
-        android:layout_marginStart="152dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/statTwo"
             android:layout_width="50dp"
             android:layout_height="39dp"
             android:enabled="false"
             android:inputType="text|number"
-            android:text="50"
-            android:textColor="@android:color/white" />
+            android:text="50" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/textInputLayout4"
         android:layout_width="126dp"
         android:layout_height="0dp"
-        android:layout_marginLeft="124dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginLeft="172dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/statOne"
             android:layout_width="50dp"
             android:layout_height="39dp"
             android:enabled="false"
             android:inputType="text|number"
-            android:text="220"
-            android:textColor="@android:color/white" />
+            android:text="220" />
     </android.support.design.widget.TextInputLayout>
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="68dp"
-        android:layout_marginStart="68dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="28dp"
         android:text="Life"
         android:textSize="24sp"
@@ -198,11 +198,23 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Input Level"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_monster" />
+
+    <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="24dp"
         android:text="Speed"
         android:textSize="24sp"
@@ -213,20 +225,20 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="68dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
         android:text="Power"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="32dp"
         android:text="Stamina"
         android:textSize="24sp"
@@ -234,12 +246,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/name_monster"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="124dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginStart="96dp"
         android:text="Fire Lion"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -250,9 +261,9 @@
         android:id="@+id/imageView2"
         android:layout_width="28dp"
         android:layout_height="25dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="140dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/stat_power" />
@@ -272,9 +283,9 @@
         android:id="@+id/imageView4"
         android:layout_width="31dp"
         android:layout_height="29dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:srcCompat="@drawable/stat_speed" />
@@ -283,9 +294,9 @@
         android:id="@+id/imageView5"
         android:layout_width="29dp"
         android:layout_height="33dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:srcCompat="@drawable/stat_stamina" />

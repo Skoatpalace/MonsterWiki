@@ -21,10 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity
-            android:name=".ProfilMonsterActivity"
-            android:windowSoftInputMode="stateHidden"></activity>
+
+        <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".ProfilMonsterActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
 
     </application>
 
