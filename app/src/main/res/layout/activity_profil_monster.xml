@@ -20,7 +20,7 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager2"
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="181dp"
         app:layout_constraintBottom_toTopOf="@+id/slideMonster"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
