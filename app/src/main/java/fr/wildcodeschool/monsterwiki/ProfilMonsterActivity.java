@@ -161,9 +161,8 @@ public class ProfilMonsterActivity extends AppCompatActivity {
                 mlevel = position;
 
                 ViewPager slideDesc = findViewById(R.id.slideMonster);
-                slideDesc.setAdapter(new StatsPageAdapter(ProfilMonsterActivity.this, mlevel));
 
-            }
+                }
 
             @Override
             public void onPageScrollStateChanged(int state) {
@@ -172,7 +171,6 @@ public class ProfilMonsterActivity extends AppCompatActivity {
         });
 
         ViewPager slideDesc = findViewById(R.id.slideMonster);
-        slideDesc.setAdapter(new StatsPageAdapter(ProfilMonsterActivity.this, mlevel));
         slideDesc.setAdapter(new StatsPageAdapter(ProfilMonsterActivity.this, mMonsterNames[monsterFamily]));
 
         ImageView logo = findViewById(R.id.logo_marks);
