@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -15,17 +16,7 @@ public class ProfilMonsterActivity extends AppCompatActivity {
     int mlevel = 0;
 
 
-    String[] mMonsterNames = {
-            "Fire Lion",
-            "Génie",
-            "Light Spirit",
-            "Metalsaur",
-            "Panda",
-            "Rockilla",
-            "Thunder Eagle",
-            "Turtle",
-            "Tyranno King",
-    };
+
     StatsPageAdapter mAdapter;
 
 
@@ -112,6 +103,18 @@ public class ProfilMonsterActivity extends AppCompatActivity {
             finalMonsterList = lionEvolution;
         }
 
+        String[] mMonsterNames = {
+                getString(R.string.name_firelion),
+                getString(R.string.name_genie),
+                getString(R.string.name_lightspirit),
+                getString(R.string.name_metalsaur),
+                getString(R.string.name_panda),
+                getString(R.string.name_rockilla),
+                getString(R.string.name_thundereagle),
+                getString(R.string.name_turtle),
+                getString(R.string.name_tyrannoking),
+        };
+
         int[] mHabitat = {
                 R.drawable.fire_habitat_8,
                 R.drawable.magic_habitat_8,
@@ -136,8 +139,33 @@ public class ProfilMonsterActivity extends AppCompatActivity {
                 R.drawable.wallpaper,
         };
 
+        int[] mWeakness = {
+                R.drawable.bte_water,
+                R.drawable.bte_nature,
+                R.drawable.bte_metal,
+                R.drawable.bte_fire,
+                R.drawable.bte_dark,
+                R.drawable.bte_earth,
+                R.drawable.bte_thunder,
+                R.drawable.bte_light,
+        };
+
+        String[] mDescription = {
+                getString(R.string.lion_description),
+                getString(R.string.genie_description),
+                getString(R.string.light_spirit_description),
+                getString(R.string.metalsaur_description),
+                getString(R.string.panda_description),
+                getString(R.string.rockilla_description),
+                getString(R.string.thunder_eagle_description),
+                getString(R.string.turtle_description),
+                getString(R.string.tyranno_description),
+        };
+
         ConstraintLayout mLinearLayout = findViewById(R.id.linearLayoutID);
         mLinearLayout.setBackgroundResource(mBackGround[monsterFamily]);
+
+
         ViewPager viewPager = findViewById(R.id.view_slide_monster);
         viewPager.setAdapter(new EvolutionPagerAdapter(this, finalMonsterList));
         viewPager.setBackgroundResource(mHabitat[monsterFamily]);
@@ -145,7 +173,7 @@ public class ProfilMonsterActivity extends AppCompatActivity {
 
         // Slider de Pierre
 
-        mAdapter = new StatsPageAdapter(ProfilMonsterActivity.this, mlevel, mMonsterNames[monsterFamily]);
+        mAdapter = new StatsPageAdapter(ProfilMonsterActivity.this, mlevel, mMonsterNames[monsterFamily],mDescription[monsterFamily],mWeakness[monsterFamily]);
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override

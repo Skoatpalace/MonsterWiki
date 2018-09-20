@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class StatsPageAdapter extends PagerAdapter {
@@ -16,11 +17,16 @@ public class StatsPageAdapter extends PagerAdapter {
     };
     String mMonsterName;
     int mlvl;
+    String mDescription;
+    int mWeakness;
 
-    public StatsPageAdapter(Context context, int level, String monsterName) {
+
+    public StatsPageAdapter(Context context, int level, String monsterName, String description, int weakness) {
         mContext = context;
         mlvl = level;
         mMonsterName = monsterName;
+        mDescription = description;
+        mWeakness = weakness;
     }
 
     @Override
@@ -69,7 +75,13 @@ public class StatsPageAdapter extends PagerAdapter {
         if (position == 0) {
             TextView monsterName = layout.findViewById(R.id.name_monster);
             monsterName.setText(mMonsterName);
+        }else{
+            TextView textDescription = layout.findViewById(R.id.text_Description);
+            textDescription.setText(mDescription);
+            ImageView imageWeakness = layout.findViewById(R.id.image_weakness);
+            imageWeakness.setImageResource(mWeakness);
         }
+
         return layout;
     }
 
