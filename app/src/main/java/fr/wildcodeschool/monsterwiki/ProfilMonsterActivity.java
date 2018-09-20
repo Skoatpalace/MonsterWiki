@@ -15,7 +15,6 @@ public class ProfilMonsterActivity extends AppCompatActivity {
     int mlevel = 0;
 
 
-
     String[] mMonsterNames = {
             "Fire Lion",
             "Génie",
@@ -27,8 +26,7 @@ public class ProfilMonsterActivity extends AppCompatActivity {
             "Turtle",
             "Tyranno King",
     };
-
-
+    StatsPageAdapter mAdapter;
 
 
     @Override
@@ -36,7 +34,7 @@ public class ProfilMonsterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil_monster);
 
-        int monsterFamily = getIntent().getIntExtra("MonsterNumber", 0);
+        final int monsterFamily = getIntent().getIntExtra("MonsterNumber", 0);
 
         ArrayList<Drawable> lionEvolution = new ArrayList<>();
         lionEvolution.add(ContextCompat.getDrawable(ProfilMonsterActivity.this, R.drawable.fire_lion_0));
@@ -115,27 +113,27 @@ public class ProfilMonsterActivity extends AppCompatActivity {
         }
 
         int[] mHabitat = {
-             R.drawable.fire_habitat_8,
-             R.drawable.magic_habitat_8,
-             R.drawable.light_habitat_8,
-             R.drawable.metal_habitat_8,
-             R.drawable.nature_habitat_8,
-             R.drawable.earth_habitat_8,
-             R.drawable.thunder_habitat_8,
-             R.drawable.water_habitat_8,
-             R.drawable.dark_habitat_8,
+                R.drawable.fire_habitat_8,
+                R.drawable.magic_habitat_8,
+                R.drawable.light_habitat_8,
+                R.drawable.metal_habitat_8,
+                R.drawable.nature_habitat_8,
+                R.drawable.earth_habitat_8,
+                R.drawable.thunder_habitat_8,
+                R.drawable.water_habitat_8,
+                R.drawable.dark_habitat_8,
         };
 
         int[] mBackGround = {
-            R.drawable.orange,
-            R.drawable.background,
-            R.drawable.ligktback,
-            R.drawable.metal_texture,
-            R.drawable.green_background,
-            R.drawable.ocre,
-            R.drawable.teagle2,
-            R.drawable.turtle,
-            R.drawable.wallpaper,
+                R.drawable.orange,
+                R.drawable.background,
+                R.drawable.ligktback,
+                R.drawable.metal_texture,
+                R.drawable.green_background,
+                R.drawable.ocre,
+                R.drawable.teagle2,
+                R.drawable.turtle,
+                R.drawable.wallpaper,
         };
 
         ConstraintLayout mLinearLayout = findViewById(R.id.linearLayoutID);
@@ -145,10 +143,9 @@ public class ProfilMonsterActivity extends AppCompatActivity {
         viewPager.setBackgroundResource(mHabitat[monsterFamily]);
 
 
-
-
-
         // Slider de Pierre
+
+        mAdapter = new StatsPageAdapter(ProfilMonsterActivity.this, mlevel, mMonsterNames[monsterFamily]);
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -159,10 +156,9 @@ public class ProfilMonsterActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 mlevel = position;
-
-                ViewPager slideDesc = findViewById(R.id.slideMonster);
-
-                }
+                mAdapter.setLevel(mlevel);
+                mAdapter.notifyDataSetChanged();
+            }
 
             @Override
             public void onPageScrollStateChanged(int state) {
@@ -171,7 +167,7 @@ public class ProfilMonsterActivity extends AppCompatActivity {
         });
 
         ViewPager slideDesc = findViewById(R.id.slideMonster);
-        slideDesc.setAdapter(new StatsPageAdapter(ProfilMonsterActivity.this, mMonsterNames[monsterFamily]));
+        slideDesc.setAdapter(mAdapter);
 
         ImageView logo = findViewById(R.id.logo_marks);
         logo.setOnClickListener(new View.OnClickListener() {
