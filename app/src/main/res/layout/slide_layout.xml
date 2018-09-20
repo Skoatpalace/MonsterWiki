@@ -110,6 +110,7 @@
             android:id="@+id/level"
             android:layout_width="50dp"
             android:layout_height="39dp"
+            android:enabled="false"
             android:inputType="text|number"
             android:text="@string/stats_lvl_0" />
     </android.support.design.widget.TextInputLayout>
@@ -204,7 +205,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="24dp"
-        android:text="Input Level"
+        android:text="Level"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_monster" />

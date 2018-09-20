@@ -19,7 +19,7 @@ public class StatsPageAdapter extends PagerAdapter {
 
     public StatsPageAdapter(Context context, int level) {
         mContext = context;
-        mlvl = level
+        mlvl = level;
     String mMonsterName;
 
     public StatsPageAdapter(Context context, String monsterName) {
@@ -30,6 +30,7 @@ public class StatsPageAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup collection, int position) {
+        int lvlValue = 0;
         int powerValue = 220;
         int lifeValue = 50;
         int speedValue = 175;
@@ -39,17 +40,20 @@ public class StatsPageAdapter extends PagerAdapter {
             lifeValue = 60;
             speedValue= 200;
             staminaValue = 100;
+            lvlValue = 10;
 
         } else if (mlvl == 2){
             powerValue = 500;
             lifeValue= 70;
             speedValue= 250;
             staminaValue= 150;
+            lvlValue = 30;
         } else if (mlvl==3){
             powerValue = 700;
             lifeValue = 100;
             speedValue = 300;
             staminaValue = 200;
+            lvlValue = 70;
         }
         LayoutInflater inflater = LayoutInflater.from(mContext);
         ViewGroup layout = (ViewGroup) inflater.inflate(mLayouts[position], collection, false);
@@ -62,6 +66,9 @@ public class StatsPageAdapter extends PagerAdapter {
             speed.setText(String.valueOf(speedValue));
             EditText stamina = layout.findViewById(R.id.statFour);
             stamina.setText(String.valueOf(staminaValue));
+            EditText levelMonster = layout.findViewById(R.id.level);
+            levelMonster.setText(String.valueOf(lvlValue));
+
 
         }
 
