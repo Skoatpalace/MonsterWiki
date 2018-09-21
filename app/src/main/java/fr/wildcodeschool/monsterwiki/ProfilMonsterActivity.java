@@ -143,6 +143,7 @@ public class ProfilMonsterActivity extends AppCompatActivity {
                 R.drawable.bte_water,
                 R.drawable.bte_nature,
                 R.drawable.bte_metal,
+                R.drawable.bte_magic,
                 R.drawable.bte_fire,
                 R.drawable.bte_dark,
                 R.drawable.bte_earth,
