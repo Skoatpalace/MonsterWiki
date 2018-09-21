@@ -1,6 +1,8 @@
 package fr.wildcodeschool.monsterwiki;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,7 +82,14 @@ public class StatsPageAdapter extends PagerAdapter {
             textDescription.setText(mDescription);
             ImageView imageWeakness = layout.findViewById(R.id.image_weakness);
             imageWeakness.setImageResource(mWeakness);
+            imageWeakness.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mContext.startActivity(new Intent(mContext, Pop.class));
+                }
+            });
         }
+
 
         return layout;
     }
@@ -106,5 +115,10 @@ public class StatsPageAdapter extends PagerAdapter {
     public int getItemPosition(Object object) {
         return POSITION_NONE;
     }
+
+
+
 }
+
+
 

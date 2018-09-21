@@ -1,5 +1,6 @@
 package fr.wildcodeschool.monsterwiki;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
@@ -167,6 +168,8 @@ public class ProfilMonsterActivity extends AppCompatActivity {
         mLinearLayout.setBackgroundResource(mBackGround[monsterFamily]);
 
 
+
+
         ViewPager viewPager = findViewById(R.id.view_slide_monster);
         viewPager.setAdapter(new EvolutionPagerAdapter(this, finalMonsterList));
         viewPager.setBackgroundResource(mHabitat[monsterFamily]);
@@ -175,6 +178,7 @@ public class ProfilMonsterActivity extends AppCompatActivity {
         // Slider de Pierre
 
         mAdapter = new StatsPageAdapter(ProfilMonsterActivity.this, mlevel, mMonsterNames[monsterFamily],mDescription[monsterFamily],mWeakness[monsterFamily]);
+
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -205,6 +209,8 @@ public class ProfilMonsterActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+
 
 
     }
